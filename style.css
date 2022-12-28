@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Roboto", sans-serif;
+}
+
+.mainContainer {
+  max-width: 280px;
+  height: 625px;
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 25px;
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  color: white;
+  padding: 0 5px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.opaLow {
+  opacity: 0.5;
+}
+
+.currentTab {
+  height: 20px;
+  border-bottom: 2px solid #fff;
+}
+
+.circle-pink {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgb(250, 37, 37);
+  opacity: 1;
+  position: absolute;
+  top: -3px;
+  right: 37%;
+}
+
+.bottom-ball {
+  top: 82%;
+  right: 18%;
+}
+
+.reactionContainer {
+  width: 30px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  right: 5px;
+}
+
+.reactionContainer i {
+  color: #fff;
+  font-size: 20px;
+}
+
+.reactionContainer img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.profile-img-container {
+  position: relative;
+}
+
+.profile-img-container img {
+  border: 1px solid #fff;
+}
+
+#plusIcon {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  background-color: rgb(214, 48, 48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#plusIcon i {
+  font-size: 8px;
+}
+
+.music-profile-container {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-profile-container img {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+}
+
+/* Tiktok Video Section */
+
+.videoContainer {
+  height: 80.5%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.videoPlayerContainer {
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+.videoPlayerContainer video,
+.pauseBtn {
+  width: 100%;
+  height: 100%;
+}
+
+.pauseBtn {
+  display: none;
+  transform: scale(0);
+  transition: all 300ms ease-in-out;
+  pointer-events: none;
+}
+
+.pauseBtn i {
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.667);
+}
+
+.pauseBtn.active {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -440px;
+  width: 100%;
+  height: 80%;
+  transform: scale(1);
+  opacity: 0.7;
+  pointer-events: all;
+  scroll-snap-align: center;
+}
+
+.videoContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Description Section */
+
+.description-container {
+  width: 100%;
+  height: 140px;
+  padding: 8px;
+  position: absolute;
+  top: 58%;
+  line-height: 20px;
+}
+
+.description-container p {
+  font-size: 10px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* Progress bar */
+
+.progress-bar {
+  width: 280px;
+  height: 4px;
+  margin-top: -5px;
+  background-color: rgba(181, 177, 177, 0.565);
+}
+
+.current-playing-bar {
+  width: 0%;
+  height: 100%;
+  margin-top: -5px;
+  background-color: rgb(255, 255, 255);
+  transition: all 200ms ease;
+}
+
+.current-playing-ball {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: -5px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  left: 15px;
+  bottom: 1.5px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 5px;
+  color: white;
+  background-color: #000;
+}
+
+small {
+  font-size: 10px;
+  color: #fff;
+}
+
+#tiktokUni {
+  width: 75px;
+  height: 70px;
+  /* overflow: hidden; */
+  overflow: hidden;
+}
+
+#tiktokUni img {
+  width: 100%;
+  margin-top: -10px;
+}
+
+.fl-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
